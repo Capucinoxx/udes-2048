@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Atelier programmation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class='center-content'>
+    <main class='dashboard'>
+      <section>
+        <div class='x-center'>
+          <ul class='steps'>
+            <div class='step-done'></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </ul>
+          <div class='step-container'>
+            <div class='explication'>
+              <h3></h3>
+              <div class="text"></div>
+            </div>
+            <div>
+              <h3>Scénarios</h3>
+              <div class="text">
+                <ul class='scenarios'>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='container'>
+          <ul class='tasks-list'></ul>
+          <div class='editor-container'>
+            <div class='flex-column'>
+              <div id='drop-zone' class='dropzone focused-edition'></div>
+              <button class='toggle-button'>Basculer à l'édition →</button>
+            </div>
+            
+            <div class='flex-column'>
+              <textarea id='editor' spellcheck="false" translate="no"></textarea>
+              <button class='toggle-button' style='visibility: hidden;'>← Basculer à l'édition</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class='game-container'>
+        <h1>2048<p class='score'>score: <span id='score'>0</span></p></h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/14984/14984835.png" draggable='false' alt="2048" class='hero-img'>
+        <div id='game'></div>
+        <button id='reset-game' class='toggle-button' style='width: 80%; margin: 0 auto;'>remise à zéro</button>
+      </section>
+    </main>
+
+
+    <div id="accept-box" class="modal">
+      <div class="modal-content">
+          <div class='modal-description'></div>
+          <div class="modal-footer">
+              <button class="btn-accept" id="accept-btn">Changer vers l'édition des blocs</button>
+              <button class="btn-decline" id="decline-btn">Rester</button>
+          </div>
+      </div>
+    </div>
+
+    <img src="assets/2048.png" class='logo-2048' />
+
+    <script src="src/utils.js"></script>
+    <script src="src/modal.js"></script>
+    <script src="src/block-manager.js"></script>
+    <script src="src/editor.js"></script>
+    <script src="src/game.js"></script>
+    <script src="src/step-manager.js"></script>
+    <script src="src/app.js"></script>
+</body>
+</html>
